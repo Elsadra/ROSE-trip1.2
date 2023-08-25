@@ -1,0 +1,446 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --green: #1fa185;
+    --green-text: #91d1c3;
+    --green-light: #b5e0d8;
+    --color-text: #7e7e7e;
+    --body-color: #fbfbfb;
+    --black: #090a1e;
+    /* --primaryColor: #6d28d9;
+    --secondaryColor: #ede9fe;
+    --mainWhite: #fff;
+    --mainBlack: #222;
+    --mainGrey: #7c7c7c;
+    --mainRed: #db2777;
+    --body-color: #f6f6f6;
+    --red-dark: #bd081c;
+    -------------------------
+    --pink: #fe0036;
+    --yellow: #fbe123;
+    --header: #333938;
+    --white: #fcfdfe;
+    --text: #a2a2a2;
+    --text-2: #454647;
+    --text-3: #b9b9b9;
+    --blue-white: #1da1f2;
+    --blue: #1877f2;
+    --black: #0e1318;
+    --color-text: #454647;
+    --white: #f7f7f7;
+    --color-text-2: #b9b9b9;
+    --orange: #fe9305; */
+}
+
+@font-face {
+    font-family: FontFa;
+    src: url(../Font/Vazir-Medium-FD-WOL.ttf);
+}
+
+/* ::-moz-selection {
+    color: var(--blue);
+    background: var(--color-text-2);
+}
+
+::selection {
+    color: var(--blue);
+    background: var(--color-text-2);
+} */
+
+.font-en {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: var(--body-color);
+    overflow-x: hidden;
+    font-family: FontFa;
+    scroll-behavior: smooth;
+}
+
+/* header */
+
+/* menu */
+
+/* header .row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 20;
+    background-color: var(--body-color);
+    /* opacity: 0; */
+}
+
+.menu {
+    width: 100%;
+    max-width: 1170px;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ul-menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.item-menu {
+    border-color: #00000000;
+    background-color: #00000000;
+    font-size: .92rem;
+}
+
+.link-menu {
+    color: var(--color-text);
+    transition: .3s;
+}
+
+.link-menu:hover {
+    color: var(--green);
+    transition: .3s;
+}
+
+.link-form {
+    border: 1px solid var(--green);
+    background-color: var(--green);
+    border-radius: 7px;
+    padding: .1rem 1rem;
+    color: white;
+}
+
+.link-form:hover {
+    color: white;
+}
+
+.brand {
+    font-weight: bold;
+}
+
+.btn-menu-active {
+    color: var(--green);
+}
+
+.brand-text {
+    color: var(--black);
+}
+
+.menu-mobile,
+.sub-menu,
+.slider-sub-menu {
+    display: none;
+}
+
+footer {
+    background-color: var(--green);
+    width: 100%;
+}
+
+.parent-newsletters {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-login-newsletters {
+    border: 1px solid var(--green-light);
+    border-radius: 6px;
+    background-color: #00000000;
+    color: var(--green-light);
+    padding: .2rem 1.8rem;
+    transition: .4s;
+}
+
+.btn-login-newsletters:hover {
+    border: 1px solid white;
+    background-color: #00000000;
+    color: white;
+    transition: .4s;
+}
+
+.input-newsletters {
+    border: 1px solid var(--green-light);
+    border-radius: 6px;
+    width: 45%;
+    background-color: var(--green-light);
+    padding: .2rem 1rem;
+    color: black;
+}
+
+.ul-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.item-footer-active {
+    color: white;
+    font-weight: 550;
+    padding: 1.8rem 0;
+}
+
+.item-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ul-footer-app {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.item-footer-app {
+    color: var(--green-light);
+    text-align: justify;
+    direction: rtl;
+    padding: 1rem 0;
+}
+
+.btn-download-app {
+    border: 1px solid var(--green-light);
+    border-radius: 6px;
+    background-color: #00000000;
+    padding: .3rem 1.8rem;
+    transition: .4s;
+}
+
+.btn-download-app:hover {
+    border: 1px solid white;
+    transition: .4s;
+}
+
+.btn-download-app:hover> .link-download-app {
+    color: white;
+    transition: .4s;
+}
+
+.link-download-app {
+    color: var(--green-light);
+    transition: .4s;
+}
+
+.link-download-app:hover {
+    color: var(--green-light);
+}
+
+.link-footer {
+    color: var(--green-light);
+    text-align: justify;
+    direction: rtl;
+    transition: .3s;
+}
+
+.link-footer:hover {
+    color: white;
+    transition: .3s;
+}
+
+.ul-footer-end {
+    border-top: 1px solid var(--color-text);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .8rem 3rem 0 0;
+}
+
+.item-footer-end {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+}
+
+.parent-logo {
+    width: 100%;
+}
+
+@media only screen and (max-width: 880px) {
+
+    .menu {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+        width: 100%;
+        max-width: 1170px;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ul-menu-mobile {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 1rem;
+        padding: 0 1rem;
+    }
+
+    .menu-hamburger {
+        cursor: pointer;
+    }
+
+    .slider-sub-menu {
+        display: block;
+    }
+
+    /* 
+    .link-sub-menu {
+        width: 33.33%;
+        background-color: yellow;
+    } */
+
+    .circle {
+        border: 1px solid var(--color-text);
+        border-radius: 100%;
+        width: 2rem;
+        height: 2rem;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+/* 
+    .line-one {
+        margin: .1rem .23rem;
+        width: 82%;
+        border: 1px solid var(--green);
+        transition: .4s;
+    }
+
+    .line-two {
+        margin: .1rem .23rem;
+        width: 42%;
+        border: 1px solid var(--green);
+        transition: .4s;
+    }
+*/
+
+    .line-one {
+        margin: .1rem .23rem;
+        width: 72%;
+        border: 1px solid var(--green);
+        transition: .7s;
+    }
+
+    .line-two {
+        margin: .1rem .23rem;
+        width: 42%;
+        border: 1px solid var(--green);
+        transition: .7s;
+    }
+
+    .line-two-click {
+        margin: .1rem .23rem;
+        width: 72%;
+        border: 1px solid var(--green);
+        transition: .7s;
+    }
+
+    .sub-menu {
+        display: block;
+        border: 1px solid var(--green);
+        background-color: var(--green);
+        position: fixed;
+        top: 4rem;
+        right: -65%;
+        width: 65%;
+        height: 90vh;
+        line-height: 5rem;
+        overflow: hidden;
+        z-index: 10;
+    }
+
+    .ul-sub-menu {
+        width: 100%;
+        height: 100%;
+        padding: 2rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .link-sub-menu {
+        color: white;
+        transition: .4s;
+    }
+
+    .link-sub-menu:hover {
+        color: var(--black);
+        padding: 0 1.8rem 0 0;
+        transition: .4s;
+    }
+
+    .link-form-menu-mobile {
+        border: 1px solid var(--color-text);
+        border-radius: 100%;
+        width: 2rem;
+        height: 2rem;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        color: var(--green);
+        transition: .4s;
+        padding: 0 .05rem 0 0;
+    }
+
+    .link-form-menu-mobile:hover {
+        border: 1px solid var(--color-text);
+        color: white;
+        background-color: var(--green);
+        transition: .4s;
+    }
+
+    .slider-sub-menu {
+        backdrop-filter: blur(2px);
+        /* background-color: rebeccapurple; */
+        position: fixed;
+        top: 4rem;
+        right: -35%;
+        width: 35%;
+        height: 90vh;
+        line-height: 5rem;
+        overflow: hidden;
+    }
+}
